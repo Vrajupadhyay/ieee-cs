@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-700">
+    <nav class="bg-gray-800 border-b border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="https://vrajupadhyay.netlify.app/assets/Vraj_logo-MFQ2T8Ez.png" class="h-8"
+                    alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">Vraj
+                    Upadhyay</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="md:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full bg-gray-800 md:flex md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="bg-gray-800 py-2 px-3 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto py-12">
+        <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+            <p class="text-gray-700 mb-6">Please fill out the form below to contact us.</p>
+            <hr class="mb-6">
+            <form action="#" onsubmit="return validateForm()">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <span id="emailError" class="text-sm text-red-500 hidden">Please enter a valid email address.</span>
+                </div>
+
+                <div class="mb-4">
+                    <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <span id="mobileError" class="text-sm text-red-500 hidden">Please enter a valid 10-digit mobile
+                        number.</span>
+                </div>
+
+                <div class="mb-4">
+                    <button type="submit"
+                        class="w-full bg-indigo-500 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <hr class="mb-6">
+    <footer
+        class="bg-gray-800 text-white text-center py-4 border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <p>&copy; 2021 Vraj Upadhyay. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script>
+        // Real-time email validation
+        document.getElementById("email").addEventListener("input", function () {
+            var email = this.value;
+            var emailError = document.getElementById("emailError");
+            if (!validateEmail(email)) {
+                emailError.classList.remove("hidden");
+            } else {
+                emailError.classList.add("hidden");
+            }
+        });
+
+        // Real-time mobile number validation
+        document.getElementById("mobile").addEventListener("input", function () {
+            var mobile = this.value;
+            var mobileError = document.getElementById("mobileError");
+            if (!validateMobile(mobile)) {
+                mobileError.classList.remove("hidden");
+            } else {
+                mobileError.classList.add("hidden");
+            }
+        });
+
+        // Email validation function
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        // Mobile number validation function
+        function validateMobile(mobile) {
+            var pattern = /^[0-9]{10}$/;
+            return pattern.test(mobile);
+        }
+
+        // Form submission validation
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var emailError = document.getElementById("emailError");
+            var mobileError = document.getElementById("mobileError");
+
+            if (!validateEmail(email)) {
+                emailError.classList.remove("hidden");
+                return false;
+            }
+
+            if (!validateMobile(mobile)) {
+                mobileError.classList.remove("hidden");
+                return false;
+            }
+
+            // form data send in new page url with query string
+            window.location.href = "table.html?name=" + document.getElementById("name").value + "&email=" + email +
+                "&mobile=" + mobile;
+            return false;
+            
+            
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- table to store the value from url -->
+    <div class="container mx-auto py-12">
+        <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+            <table class="table-auto">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2">Name</th>
+                        <th class="px-4 py-2">Email</th>
+                        <th class="px-4 py-2">Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="tname" class="px-4 py-2"></td>
+                        <td id="temail" class="px-4 py-2"></td>
+                        <td id="tmobile" class="px-4 py-2"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const email = urlParams.get('email');
+        const mobile = urlParams.get('mobile');
+
+        // Set the value to the table
+        document.getElementById('tname').innerText = name;
+        document.getElementById('temail').innerText = email;
+        document.getElementById('tmobile').innerText = mobile;
+    </script>
+</body>
+</html>
